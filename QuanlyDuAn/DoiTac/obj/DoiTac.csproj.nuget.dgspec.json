@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\khai5\\source\\repos\\QuanlyDuAn\\DoiTac\\DoiTac.csproj": {}
+    "C:\\Users\\khai5\\source\\repos\\QuanLyDuAngit\\QuanlyDuAn\\DoiTac\\DoiTac.csproj": {}
   },
   "projects": {
-    "C:\\Users\\khai5\\source\\repos\\QuanlyDuAn\\DoiTac\\DoiTac.csproj": {
+    "C:\\Users\\khai5\\source\\repos\\QuanLyDuAngit\\QuanlyDuAn\\DoiTac\\DoiTac.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\khai5\\source\\repos\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
+        "projectUniqueName": "C:\\Users\\khai5\\source\\repos\\QuanLyDuAngit\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
         "projectName": "DoiTac",
-        "projectPath": "C:\\Users\\khai5\\source\\repos\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
+        "projectPath": "C:\\Users\\khai5\\source\\repos\\QuanLyDuAngit\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
         "packagesPath": "C:\\Users\\khai5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\khai5\\source\\repos\\QuanlyDuAn\\DoiTac\\obj\\",
+        "outputPath": "C:\\Users\\khai5\\source\\repos\\QuanLyDuAngit\\QuanlyDuAn\\DoiTac\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,6 +47,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
