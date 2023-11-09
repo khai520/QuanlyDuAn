@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k0WzjQZHzQL2LTdvLyi7h84anBfrKwHVYaa+kgnoZsKHuYbg2S3Gna/c5rQ4nT6aBb3YlFJQZuS+vYiLOKeOZA==",
+  "dgSpecHash": "7aiePSsfovfIDic80+AyKYBONxPuz0GKmodGc5rYWs7YAvNQtoQbjy/0aShqKh3iD4qn7KFIdXDRn1o1LsDOQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\khai5\\source\\repos\\QuanLyDuAngit\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
+  "projectFilePath": "C:\\Users\\khai5\\OneDrive\\Tài liệu\\GitHub\\QuanlyDuAn\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\khai5\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
     "C:\\Users\\khai5\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
