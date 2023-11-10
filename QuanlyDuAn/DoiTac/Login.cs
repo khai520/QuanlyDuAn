@@ -35,6 +35,5 @@ namespace DoiTac
             rg.ShowDialog();
             this.Close();
         }
-
     }
 }
