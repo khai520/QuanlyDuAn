@@ -12,20 +12,35 @@ namespace DoiTac
 {
     public partial class Login : Form
     {
+        ConectionSQL conectionSQL = new();
+
         public Login(string text)
         {
             InitializeComponent();
             this.txt_TenDn.Text = text;
+            conectionSQL.Ketnoi();
         }
 
         public Login()
         {
             InitializeComponent();
+            conectionSQL.Ketnoi();
         }
 
         private void btn_DN_Click(object sender, EventArgs e)
         {
-            lb_TB.Show();
+            
+            if (conectionSQL.getDataTk(txt_TenDn.Text, txt_Mk.Text) == "DT")
+            {
+                this.Hide();
+                Home home = new Home();
+                home.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                lb_TB.Show();
+            }
         }
 
         private void btn_DK_Click(object sender, EventArgs e)

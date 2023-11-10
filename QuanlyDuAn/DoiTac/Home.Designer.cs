@@ -1,4 +1,6 @@
-﻿namespace DoiTac
+﻿using ListViewSortAnyColumn;
+
+namespace DoiTac
 {
     partial class Home
     {
@@ -30,6 +32,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             list_Danhsach = new ListView();
+            clsThutu = new ColumnHeader();
             clsID = new ColumnHeader();
             clsTenDuAn = new ColumnHeader();
             clsDiachi = new ColumnHeader();
@@ -60,15 +63,27 @@
             // 
             // list_Danhsach
             // 
-            list_Danhsach.Columns.AddRange(new ColumnHeader[] { clsID, clsTenDuAn, clsDiachi, clsMota, clsGia, clsDientich, clsIDChungCu });
+            list_Danhsach.AllowColumnReorder = true;
+            list_Danhsach.CheckBoxes = true;
+            list_Danhsach.Columns.AddRange(new ColumnHeader[] { clsThutu, clsID, clsTenDuAn, clsDiachi, clsMota, clsGia, clsDientich, clsIDChungCu });
             list_Danhsach.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            list_Danhsach.FullRowSelect = true;
+            list_Danhsach.ImeMode = ImeMode.NoControl;
             list_Danhsach.Location = new Point(12, 12);
+            list_Danhsach.MultiSelect = false;
             list_Danhsach.Name = "list_Danhsach";
             list_Danhsach.Size = new Size(938, 304);
             list_Danhsach.TabIndex = 0;
             list_Danhsach.TileSize = new Size(1, 1);
             list_Danhsach.UseCompatibleStateImageBehavior = false;
             list_Danhsach.View = View.Details;
+            this.list_Danhsach.ColumnClick += new ColumnClickEventHandler(ColumnClick);
+            lvwColumnSorter = new ItemComparer();
+            this.list_Danhsach.ListViewItemSorter = lvwColumnSorter;
+            // 
+            // clsThutu
+            // 
+            clsThutu.Text = "Thứ tự";
             // 
             // clsID
             // 
@@ -262,6 +277,7 @@
             btn_TcDa.TabIndex = 17;
             btn_TcDa.Text = "Tất cả dự án";
             btn_TcDa.UseVisualStyleBackColor = true;
+            btn_TcDa.Click += btn_TcDa_Click;
             // 
             // btn_DaCt
             // 
@@ -309,10 +325,16 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(list_Danhsach);
+            MaximizeBox = false;
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void List_Danhsach_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -344,5 +366,6 @@
         private Button btn_TcDa;
         private Button btn_DaCt;
         private Button btn_CtDa;
+        private ColumnHeader clsThutu;
     }
 }

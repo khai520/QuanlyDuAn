@@ -11,6 +11,7 @@ namespace DoiTac
 {
     internal class ConectionSQL
     {
+        Login lg;
         SqlConnection conn; //Hỗ trợ kết nối
         SqlCommand com; // Hỗ trợ xử lý lệnh
         SqlDataAdapter da; //adapter
@@ -18,22 +19,47 @@ namespace DoiTac
         public void Ketnoi()
         {
             // chuỗi kết nối csdl
-            string s = "Data Source =.; Initaial Catalog = QLDA; Integarated Security = True";
+            string s = "Data Source =.; Initial Catalog = QLBDS; Integrated Security = True";
             conn = new SqlConnection(s); //  khởi tạo kết nối
             da = new SqlDataAdapter(); // khởi tạo bộ điều phối dữ liệu
             ds = new DataSet(); // khởi tạo ảnh của cơ sở dữ liệu
         }
-        public void getData(ListView lv)
+        public void getDataDSDD(ListView lv)
         {
-            com = new SqlCommand("select * form ", conn);// Câu lệnh truy vấn
+            lv.Items.Clear();
+            ds.Reset();
+            com = new SqlCommand("select * from DuAnDaDuyet ", conn);// Câu lệnh truy vấn
             da.SelectCommand = com; // select
-            da.Fill(ds, "Product"); // điền dữ liệu trên listview
-            for (int row = 0; row < ds.Tables[0].Rows.Count; row++)// chạy từ dòng 0 đến n
+            da.Fill(ds, "DuAnDaDuyet"); // điền dữ liệu vào dataset
+            for (int j = 0; j < ds.Tables[0].Rows.Count; j++)
             {
-                lv.Items.Add(ds.Tables[0].Rows[row].ItemArray[0].ToString());// Thêm dòng
-                lv.Items[row].SubItems.Add(ds.Tables[0].Rows[row].ItemArray[1].ToString());
-                lv.Items[row].SubItems.Add(ds.Tables[0].Rows[row].ItemArray[2].ToString());
-                lv.Items[row].SubItems.Add(ds.Tables[0].Rows[row].ItemArray[3].ToString());
+                lv.Items.Add(Convert.ToString(j + 1));
+                for (int i = 0; i < ds.Tables[0].Columns.Count; i++)
+                {
+                    lv.Items[j].SubItems.Add(ds.Tables[0].Rows[j].ItemArray[i].ToString());
+                }
+            }
+        }
+        public string getDataTk(string tdn , string mk) 
+        {
+            ds.Reset();
+            com = new SqlCommand($"select Chucdanh from TkDangNhap where Tdn = '{tdn}' and Mk = '{mk}'" , conn);
+            da.SelectCommand = com;
+            da.Fill(ds, "TkDangNhap");
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                if (ds.Tables[0].Rows[0].ItemArray[0].ToString() == "DoiTac")
+                {
+                    return "DT";
+                }
+                else
+                {
+                    return "Null";
+                }
+            }
+            else
+            {
+                return "Null";
             }
         }
     }
