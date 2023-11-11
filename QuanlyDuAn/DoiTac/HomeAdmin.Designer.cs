@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace admin
 {
-    partial class Form1
+    partial class HomeAdmin
     {
         /// <summary>
         /// Required designer variable.

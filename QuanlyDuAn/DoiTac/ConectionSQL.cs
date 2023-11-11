@@ -11,7 +11,6 @@ namespace DoiTac
 {
     internal class ConectionSQL
     {
-        Login lg;
         SqlConnection conn; //Hỗ trợ kết nối
         SqlCommand com; // Hỗ trợ xử lý lệnh
         SqlDataAdapter da; //adapter
