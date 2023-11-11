@@ -40,10 +40,7 @@ namespace DoiTac
             }
         }
 
-        private void txt_XnMk_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void btn_Dk_Click(object sender, EventArgs e)
         {

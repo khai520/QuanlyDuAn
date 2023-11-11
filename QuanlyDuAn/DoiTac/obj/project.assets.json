@@ -1027,9 +1027,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\khai5\\OneDrive\\Tài liệu\\GitHub\\QuanlyDuAn\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
-      "projectName": "DoiTac",
-      "projectPath": "C:\\Users\\khai5\\OneDrive\\Tài liệu\\GitHub\\QuanlyDuAn\\QuanlyDuAn\\DoiTac\\DoiTac.csproj",
+      "projectUniqueName": "C:\\Users\\khai5\\OneDrive\\Tài liệu\\GitHub\\QuanlyDuAn\\QuanlyDuAn\\DoiTac\\QuanLyDuAnBDS.csproj",
+      "projectName": "QuanLyDuAnBDS",
+      "projectPath": "C:\\Users\\khai5\\OneDrive\\Tài liệu\\GitHub\\QuanlyDuAn\\QuanlyDuAn\\DoiTac\\QuanLyDuAnBDS.csproj",
       "packagesPath": "C:\\Users\\khai5\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\khai5\\OneDrive\\Tài liệu\\GitHub\\QuanlyDuAn\\QuanlyDuAn\\DoiTac\\obj\\",
       "projectStyle": "PackageReference",

@@ -33,7 +33,7 @@ namespace DoiTac
             if (conectionSQL.getDataTk(txt_TenDn.Text, txt_Mk.Text) == "DT")
             {
                 this.Hide();
-                Home home = new Home();
+                HomeDT home = new HomeDT();
                 home.ShowDialog();
                 this.Close();
             }

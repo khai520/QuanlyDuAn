@@ -72,7 +72,6 @@
             // 
             resources.ApplyResources(txt_XnMk, "txt_XnMk");
             txt_XnMk.Name = "txt_XnMk";
-            txt_XnMk.TextChanged += txt_XnMk_TextChanged;
             // 
             // btn_Dk
             // 

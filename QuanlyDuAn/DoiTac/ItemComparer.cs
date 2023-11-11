@@ -21,7 +21,7 @@ namespace ListViewSortAnyColumn
         {
             int compareResult;
             ListViewItem listviewX, listviewY;
-
+            
             listviewX = (ListViewItem)x;
             listviewY = (ListViewItem)y;
 
@@ -40,6 +40,7 @@ namespace ListViewSortAnyColumn
      
                 return 0;
             }
+            
         }
         public int SortColumn
         {
@@ -63,5 +64,6 @@ namespace ListViewSortAnyColumn
                 return OrderOfSort;
             }
         }
+
     }
 }
