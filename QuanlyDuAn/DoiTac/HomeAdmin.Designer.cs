@@ -1,4 +1,4 @@
-﻿using admin.Properties;
+﻿
 using System.Drawing;
 using System.Windows.Forms;
 

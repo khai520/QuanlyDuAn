@@ -35,3 +35,5 @@ C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\DoiTac\obj\De
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\DoiTac\obj\Debug\net6.0-windows\QuanLyDuAnBDS.pdb
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\DoiTac\obj\Debug\net6.0-windows\QuanLyDuAnBDS.genruntimeconfig.cache
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\DoiTac\obj\Debug\net6.0-windows\ref\QuanLyDuAnBDS.dll
+C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\DoiTac\obj\Debug\net6.0-windows\admin.Form1.resources
+C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\DoiTac\bin\Debug\net6.0-windows\QuanLyDuAnBDS.dll.config
