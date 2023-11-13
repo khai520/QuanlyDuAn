@@ -7,6 +7,9 @@
     <Compile Update="Log\infor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Log\RegisterObj.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Staff\HomeDT.cs">
       <SubType>Form</SubType>
     </Compile>

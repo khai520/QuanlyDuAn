@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyDuAnBDS.Log;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +43,15 @@ namespace Application
         {
             if (KiemtraMk(lb_Mk.Text, lb_XnMk.Text))
             {
-
+                this.Hide ();
+                infor infor = new();
+                infor.ShowDialog();
+                infor.LayThongTin(lb_TenDn.Text,lb_Mk.Text);
+                this.Close();
+            }
+            else 
+            {
+                lb_TB.Show();
             }
         }
 

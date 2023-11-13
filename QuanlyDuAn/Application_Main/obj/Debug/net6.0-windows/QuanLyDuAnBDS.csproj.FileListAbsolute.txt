@@ -76,3 +76,4 @@ C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_M
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.pdb
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.genruntimeconfig.cache
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\ref\QuanLyDuAnBDS.dll
+C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.Log.RegisterObj.resources
