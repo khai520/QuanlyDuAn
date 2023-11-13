@@ -1,4 +1,4 @@
-﻿namespace DoiTac
+﻿namespace Application
 {
     partial class Register
     {

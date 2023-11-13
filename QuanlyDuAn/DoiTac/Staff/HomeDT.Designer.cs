@@ -1,6 +1,5 @@
-﻿using ListViewSortAnyColumn;
-
-namespace DoiTac
+﻿
+namespace Application
 {
     partial class HomeDT
     {

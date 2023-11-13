@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyDuAnBDS.DB;
 
-namespace DoiTac
+namespace Application
 {
     public partial class Login : Form
     {

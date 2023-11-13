@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoiTac
+namespace Application
 {
 
     public partial class Register : Form

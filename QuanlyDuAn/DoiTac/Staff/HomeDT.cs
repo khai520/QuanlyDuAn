@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
-namespace DoiTac
+namespace Application
 {
 
     public partial class HomeDT : Form
