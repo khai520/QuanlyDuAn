@@ -3,13 +3,15 @@ Go
 Use QLBDS
 Go
 Create table TkDangNhap(
-	Chucdanh nvarchar(10) not null,
+	Chucdanh nvarchar(10) null,
 	IDTk char(5) Primary key not null ,
 	Tdn nvarchar(max) not null,
 	Mk nvarchar(max) not null,
 	Ten nvarchar(50) not null,
 	GT int not null,
-	SDT nvarchar(10) null
+	NS date not null,
+	Gmail nvarchar(max) null,
+	SDT nvarchar(10) not null
 )
 Go
 Create Table DuAnChuaDuyet(

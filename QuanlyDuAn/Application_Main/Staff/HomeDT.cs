@@ -23,18 +23,18 @@ namespace Application
         public HomeDT()
         {
             InitializeComponent();
-            conectionSQL.Ketnoi();
             ListDataAll();
         }
 
         public void ListDataAll()
         {
-            conectionSQL.getDataDSDD(list_Danhsach);
+            conectionSQL.getData(list_Danhsach , "select * from DuAnDaDuyet");
         }
 
         private void btn_TcDa_Click(object sender, EventArgs e)
         {
             ListDataAll();
+
         }
         private void ColumnClick(object sender, ColumnClickEventArgs e)
         {
@@ -62,13 +62,14 @@ namespace Application
         {
 
         }
-        private void XemChiTietDuAn()
-        {
-             
-        }
         private void btn_CtDa_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void HomeDT_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

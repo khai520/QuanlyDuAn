@@ -305,7 +305,7 @@ namespace Application
             button1.Name = "button1";
             button1.Size = new Size(120, 58);
             button1.TabIndex = 20;
-            button1.Text = "Đăng thêm dự án mơi";
+            button1.Text = "Đăng dự án ";
             button1.UseVisualStyleBackColor = true;
             // 
             // HomeDT
@@ -337,6 +337,7 @@ namespace Application
             MaximizeBox = false;
             Name = "HomeDT";
             StartPosition = FormStartPosition.CenterScreen;
+            Load += HomeDT_Load;
             ResumeLayout(false);
             PerformLayout();
         }

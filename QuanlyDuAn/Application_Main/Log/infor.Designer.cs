@@ -220,6 +220,7 @@
             Name = "infor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "infor";
+            Load += infor_Load;
             ResumeLayout(false);
             PerformLayout();
         }

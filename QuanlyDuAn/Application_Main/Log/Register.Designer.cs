@@ -38,7 +38,6 @@
             btn_Dk = new Button();
             btn_Dn = new Button();
             lb_ThongBao = new Label();
-            lb_TB = new Label();
             SuspendLayout();
             // 
             // lb_TenDn
@@ -93,18 +92,13 @@
             resources.ApplyResources(lb_ThongBao, "lb_ThongBao");
             lb_ThongBao.BackColor = Color.Linen;
             lb_ThongBao.Name = "lb_ThongBao";
-            // 
-            // lb_TB
-            // 
-            resources.ApplyResources(lb_TB, "lb_TB");
-            lb_TB.Name = "lb_TB";
+            lb_ThongBao.Hide();
             // 
             // Register
             // 
             AutoScaleMode = AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            Controls.Add(lb_TB);
             Controls.Add(lb_ThongBao);
             Controls.Add(btn_Dn);
             Controls.Add(btn_Dk);
@@ -133,6 +127,5 @@
         private Button btn_Dk;
         private Button btn_Dn;
         private Label lb_ThongBao;
-        private Label lb_TB;
     }
 }

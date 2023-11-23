@@ -1,4 +1,5 @@
 ﻿using Application;
+using QuanLyDuAnBDS.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,15 +16,16 @@ namespace QuanLyDuAnBDS.Log
     {
         private string tk;
         private string mk;
-
+        QlbdsContext db = new QlbdsContext();
+        TkDangNhap tkdn = new TkDangNhap();
         public infor()
         {
             InitializeComponent();
         }
         public void LayThongTin(string tkc, string mkc)
         {
-            tk = tkc; mk = mkc;
-
+            tk = tkc;
+            mk = mkc;
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -33,14 +35,24 @@ namespace QuanLyDuAnBDS.Log
             rg.ShowDialog();
             this.Close();
         }
-
-        private bool CheckThongtin()
+        private string GioiTinh()
         {
-            return false;
+            if (!rb_Nam.Checked)
+                if (!rb_Nu.Checked)
+                    return "Khác";
+                else
+                    return "Nữ";
+            else
+                return "Nam";
         }
         private void btn_DK_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void infor_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using QuanLyDuAnBDS.Log;
+﻿using QuanLyDuAnBDS.DB;
+using QuanLyDuAnBDS.Log;
+using QuanLyDuAnBDS.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,10 +13,10 @@ using System.Windows.Forms;
 
 namespace Application
 {
-
     public partial class Register : Form
     {
-
+        ConectionSQL con;
+        QlbdsContext db = new QlbdsContext();
         public Register(string textbox)
         {
             InitializeComponent();
@@ -28,30 +30,22 @@ namespace Application
             lg.ShowDialog();
             this.Close();
         }
-        public bool KiemtraMk(string mk, string xnmk)
+       
+        private void btn_Dk_Click(object sender, EventArgs e)
         {
-            if (mk != xnmk)
+            string check = con.KiemtraMk(txt_TenDn.Text, txt_Mk.Text, txt_XnMk.Text);
+            if (check == "")
             {
-                return true;
+                this.Hide();
+                infor infor = new();
+                infor.ShowDialog();
+                infor.LayThongTin(lb_TenDn.Text, lb_Mk.Text);
+                this.Close();
             }
             else
             {
-                return false;
-            }
-        }
-        private void btn_Dk_Click(object sender, EventArgs e)
-        {
-            if (KiemtraMk(lb_Mk.Text, lb_XnMk.Text))
-            {
-                this.Hide ();
-                infor infor = new();
-                infor.ShowDialog();
-                infor.LayThongTin(lb_TenDn.Text,lb_Mk.Text);
-                this.Close();
-            }
-            else 
-            {
-                lb_TB.Show();
+                lb_ThongBao.Text = check;
+                lb_ThongBao.Show();
             }
         }
 
