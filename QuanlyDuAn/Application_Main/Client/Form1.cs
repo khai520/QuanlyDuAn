@@ -1,9 +1,4 @@
-﻿
-using System.Data;
-using System.Data.SqlClient;
-using System.Xml.Serialization;
-
-namespace ADOdemo
+namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {

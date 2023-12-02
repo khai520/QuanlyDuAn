@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyDuAnBDS.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace QuanLyDuAnBDS.Log
 {
     public partial class RegisterObj : Form
     {
+        QlbdsContext db = new();
+        string IDTam;
         public RegisterObj()
         {
             InitializeComponent();
@@ -39,7 +42,44 @@ namespace QuanLyDuAnBDS.Log
                 checkBox1.Checked = false;
                 checkBox2.Checked = true;
             }
+        }
+        public void XetKh(string Id)
+        {
+            IDTam = Id;
+        }
+        public string DkID(string IdTam) {
+            string Id;
+            if (checkBox1.Checked)
+            {
+                Id = "Dt" + IDTam.Skip(2).Take(3);
+                return "Dt";
+            }
+            else
+            {
+                Id = "Kh" + IdTam.Skip(2).Take(3);
+                return "Kh";
+            }
+            TkDangNhap tkdn = new()
+            {
+                Idtk = Id,
+            };
+            db.TkDangNhaps.Update(tkdn);
+            db.SaveChanges();
+        }
 
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked || checkBox2.Checked)
+            {
+                if (DkID(IDTam) == "Dt")
+                {
+
+                }
+                else
+                {
+                      
+                }   
+            }
         }
     }
 }

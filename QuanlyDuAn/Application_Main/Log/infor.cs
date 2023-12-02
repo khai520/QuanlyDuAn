@@ -1,4 +1,5 @@
 ﻿using Application;
+using QuanLyDuAnBDS.DB;
 using QuanLyDuAnBDS.Models;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace QuanLyDuAnBDS.Log
         private string mk;
         QlbdsContext db = new QlbdsContext();
         TkDangNhap tkdn = new TkDangNhap();
+        ConectionSQL cn = new();
         public infor()
         {
             InitializeComponent();
@@ -47,7 +49,14 @@ namespace QuanLyDuAnBDS.Log
         }
         private void btn_DK_Click(object sender, EventArgs e)
         {
-            
+            if (cn.setDataTk(tk,mk,txt_HovaTen.Text,GioiTinh(),dtp_Ngaysinh,txt_Gmail.Text,txt_SDT.Text))
+            {
+                this.Hide();
+                RegisterObj rgo = new();
+                rgo.XetKh()
+                rgo.ShowDialog();
+                this.Close();
+            }
         }
 
         private void infor_Load(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using QuanLyDuAnBDS.DB;
+﻿using Microsoft.IdentityModel.Tokens;
+using QuanLyDuAnBDS.DB;
 using QuanLyDuAnBDS.Log;
 using QuanLyDuAnBDS.Models;
 using System;
@@ -15,7 +16,7 @@ namespace Application
 {
     public partial class Register : Form
     {
-        ConectionSQL con;
+        ConectionSQL con = new();
         QlbdsContext db = new QlbdsContext();
         public Register(string textbox)
         {
@@ -33,22 +34,28 @@ namespace Application
        
         private void btn_Dk_Click(object sender, EventArgs e)
         {
-            string check = con.KiemtraMk(txt_TenDn.Text, txt_Mk.Text, txt_XnMk.Text);
-            if (check == "")
+            string? check = con.KiemtraMk(txt_TenDn.Text, txt_Mk.Text, txt_XnMk.Text);
+            try
             {
-                this.Hide();
-                infor infor = new();
-                infor.ShowDialog();
-                infor.LayThongTin(lb_TenDn.Text, lb_Mk.Text);
-                this.Close();
+                if (check == "")
+                {
+                    this.Hide();
+                    infor infor = new();
+                    infor.ShowDialog();
+                    infor.LayThongTin(lb_TenDn.Text, lb_Mk.Text);
+                    this.Close();
+                }
+                else
+                {
+                    lb_ThongBao.Text = check;
+                    lb_ThongBao.Show();
+                }
             }
-            else
+            catch (Exception)
             {
-                lb_ThongBao.Text = check;
-                lb_ThongBao.Show();
+                MessageBox.Show("Thiếu dữ liệu");
+                throw;
             }
         }
-
-
     }
 }

@@ -23,7 +23,6 @@ namespace Application
         public HomeDT()
         {
             InitializeComponent();
-            ListDataAll();
         }
 
         public void ListDataAll()
@@ -69,7 +68,7 @@ namespace Application
 
         private void HomeDT_Load(object sender, EventArgs e)
         {
-            
+            ListDataAll();
         }
     }
 }

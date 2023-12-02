@@ -164,6 +164,7 @@
             btn_Next.TabIndex = 2;
             btn_Next.Text = "Next";
             btn_Next.UseVisualStyleBackColor = true;
+            btn_Next.Click += btn_Next_Click;
             // 
             // RegisterObj
             // 

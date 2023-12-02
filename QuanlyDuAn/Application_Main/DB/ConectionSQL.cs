@@ -1,4 +1,5 @@
-﻿using QuanLyDuAnBDS.Models;
+﻿using QuanLyDuAnBDS.Log;
+using QuanLyDuAnBDS.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,6 +18,7 @@ namespace QuanLyDuAnBDS.DB
         SqlDataAdapter da; //adapter
         DataSet ds; // anh bang du lieu
         QlbdsContext db = new();
+        
         public void Ketnoi()
         {
             // chuỗi kết nối csdl
@@ -48,10 +50,10 @@ namespace QuanLyDuAnBDS.DB
         }
         public string KiemtraMk(string tk, string mk, string xnmk)
         {
-            string check = db.TkDangNhaps.Where(x => x.Tdn == tk).SingleOrDefault() != null ? "Tên đăng nhập hiện đã có" : mk.Length < 6 ? "Mật khẩu quá ngắn" : mk != xnmk ? "Xác nhận mật khẩu không trùng khớp" : "";
+            string check = tk == "" && mk == "" && xnmk == "" ? "Chưa nhập tài khoản và mật khẩu" : db.TkDangNhaps.Where(x => x.Tdn == tk).SingleOrDefault() != null ? "Tên đăng nhập hiện đã có" : mk.Length < 6 ? "Mật khẩu quá ngắn" : mk != xnmk ? "Xác nhận mật khẩu không trùng khớp" : "";
             return check;
         }
-        public string getDataTk(string tdn, string mk)
+        public string? getDataTk(string tdn, string mk)
         {
             ds.Reset();
             com = new SqlCommand($"select Chucdanh from TkDangNhap where Tdn = '{tdn}' and Mk = '{mk}'", conn);
@@ -83,7 +85,7 @@ namespace QuanLyDuAnBDS.DB
               
         //    }
         //}
-        public bool setDataTk(string tk , string mk, string hvt , string gt , DateTimePicker ns , string gmail , string sdt)
+        public bool setDataTk(string tk , string mk, string hvt , string gt , DateTimePicker ns , string? gmail , string sdt)
         {
             Ketnoi();
             ds.Reset();
@@ -95,11 +97,44 @@ namespace QuanLyDuAnBDS.DB
                     {
                         if (!string.IsNullOrEmpty(sdt) && sdt.Length > 9 && (sdt.StartsWith("01") || sdt.StartsWith("09") || sdt.StartsWith("08")))
                         {
-                            com = new SqlCommand($"Insert into TkDangNhap Values ( null , null ,N'{tk}' , N'{mk}' ,'N'{hvt}',{(gt == "Nam" ? 0 : gt == "Nữ" ? 1 : 2)},N'{ns.Value.ToString("dd-MM-yyyy")}','{gmail}','{sdt}')" , conn);
+                            string? IDTam = "";
+                            for (int i = 1; i < 1000; i++)
+                            {
+                                if (i > 0 && i < 10 && db.TkDangNhaps.Where(x => x.Idtk == $"00{i}") != null)
+                                {
+                                    IDTam = $"id00{i}";
+                                }
+                                else if (i >= 10 && i < 100 && db.TkDangNhaps.Where(x => x.Idtk == $"0{i}") != null)
+                                {
+                                    IDTam = $"id0{i}";
+                                }
+                                else if (db.TkDangNhaps.Where(x => x.Idtk == $"{i}") != null)
+                                {
+                                    IDTam = $"id{i}";
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ứng dụng hiện đang được Update !Vui lòng tạo tài khoản lại sau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    infor infor = new();
+                                    infor.Close();
+                                }
+                            }
                             TkDangNhap tkdn = new TkDangNhap()
                             {
-                                
-                            }
+                                Chucdanh = null,
+                                Idtk = IDTam,
+                                Tdn = tk,
+                                Mk = mk,
+                                Ten = hvt,
+                                Gt = gt == "Nam" ? 0 : gt == "Nữ" ? 1 : 2,
+                                Ns = DateTime.ParseExact(ns.Value.ToString("dd-MM-yyyy"), "dd-MM-yyyy", null),
+                                Gmail = gmail,
+                                Sdt = sdt,
+                            };
+                            db.Add( tkdn);
+                            db.SaveChanges();
+                            RegisterObj rgo = new RegisterObj();
+                            rgo.XetKh(IDTam);
                             return true;
                         }
                         else
