@@ -57,7 +57,7 @@ namespace Application
             dgv_listdanhsach.Columns[4].HeaderText = "Địa chỉ";
             dgv_listdanhsach.Columns[5].HeaderText = "Diện tích";
             dgv_listdanhsach.Columns[6].HeaderText = "Mô tả ";
-            //dgv_listdanhsach.Columns[8].HeaderText = "Id đối tác";
+            dgv_listdanhsach.Columns[7].HeaderText = "Id đối tác";
         }
         private void HomeDT_Load(object sender, EventArgs e)
         {
@@ -87,7 +87,7 @@ namespace Application
                 x.Idtk,
                 x.TinhTrang
             }).ToList();
-            dgv_listdanhsach.Columns[7].HeaderText = "Tình trạng";
+            dgv_listdanhsach.Columns[8].HeaderText = "Tình trạng";
         }
 
 
@@ -114,7 +114,7 @@ namespace Application
                 {
                     if (dgv_listdanhsach.Columns.Count == 9)
                     {
-                        dgv_listdanhsach.DataSource = sv.SapxepTang(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id , check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -129,7 +129,7 @@ namespace Application
                     }
                     else
                     {
-                        dgv_listdanhsach.DataSource = sv.SapxepTang(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id ,check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -149,7 +149,7 @@ namespace Application
                     if (dgv_listdanhsach.Columns.Count == 9)
                     {
 
-                        dgv_listdanhsach.DataSource = sv.SapxepGiam(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -164,7 +164,7 @@ namespace Application
                     }
                     else
                     {
-                        dgv_listdanhsach.DataSource = sv.SapxepGiam(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id,check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -186,7 +186,7 @@ namespace Application
                     check = false;
                     if (dgv_listdanhsach.Columns.Count == 9)
                     {
-                        dgv_listdanhsach.DataSource = sv.SapxepTang(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -201,7 +201,7 @@ namespace Application
                     }
                     else
                     {
-                        dgv_listdanhsach.DataSource = sv.SapxepTang(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -219,7 +219,7 @@ namespace Application
                     check = true;
                     if (dgv_listdanhsach.Columns.Count == 9)
                     {
-                        dgv_listdanhsach.DataSource = sv.SapxepGiam(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -234,7 +234,7 @@ namespace Application
                     }
                     else
                     {
-                        dgv_listdanhsach.DataSource = sv.SapxepGiam(dgv_listdanhsach, d, Id).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,

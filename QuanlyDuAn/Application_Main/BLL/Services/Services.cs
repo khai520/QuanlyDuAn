@@ -55,7 +55,8 @@ namespace QuanLyDuAnBDS.BLL.Services
             }
             return allDA;
         }
-        public List<AllDA> SapxepTang(DataGridView dgv_listdanhsach , int d , int Id)
+ 
+        public List<AllDA> Sapxep(DataGridView dgv_listdanhsach , int d , int Id, bool check)
         {
             int i = 1;
             AllDA all = new AllDA();
@@ -81,90 +82,69 @@ namespace QuanLyDuAnBDS.BLL.Services
                     allDA.Add(all);
                 }
             }
-            if (d == 1)
+            if (check)
             {
-                allDA = allDA.OrderBy(x => x.Idda).ToList();
-            }
-            else if (d == 2)
-            {
-                allDA = allDA.OrderBy(x => x.Gia).ToList();
-            }
-            else if (d == 3)
-            {
-                allDA = allDA.OrderBy(x => x.Diachi).ToList();
-            }
-            else if (d == 4)
-            {
-                allDA = allDA.OrderBy(x => x.Dientich).ToList();
-            }
-            else if (d == 5)
-            {
-                allDA = allDA.OrderBy(x => x.Mota).ToList();
-            }
-            else if (d == 6)
-            {
-                allDA = allDA.OrderBy(x => x.Idtk).ToList();
-            }
-            else if (d == 7)
-            {
-                allDA = allDA.OrderBy(x => x.TinhTrang).ToList();
-            }
-            return allDA;
-        }
-        public List<AllDA> SapxepGiam(DataGridView dgv_listdanhsach, int d, int Id)
-        {
-            int i = 1;
-            AllDA all = new AllDA();
-            List<AllDA> allDA = new();
-            if (dgv_listdanhsach.Columns.Count == 9)
-            {
-                allDA = AllDACT(Id);
+                if (d == 1)
+                {
+                    allDA = allDA.OrderBy(x => x.Idda).ToList();
+                }
+                else if (d == 2)
+                {
+                    allDA = allDA.OrderBy(x => x.Gia).ToList();
+                }
+                else if (d == 3)
+                {
+                    allDA = allDA.OrderBy(x => x.Diachi).ToList();
+                }
+                else if (d == 4)
+                {
+                    allDA = allDA.OrderBy(x => x.Dientich).ToList();
+                }
+                else if (d == 5)
+                {
+                    allDA = allDA.OrderBy(x => x.Mota).ToList();
+                }
+                else if (d == 6)
+                {
+                    allDA = allDA.OrderBy(x => x.Idtk).ToList();
+                }
+                else if (d == 7)
+                {
+                    allDA = allDA.OrderBy(x => x.TinhTrang).ToList();
+                }
             }
             else
             {
-                foreach (var item in aDDRepositories.GetAllDaDD())
+                if (d == 1)
                 {
-                    all = new()
-                    {
-                        Idda = item.Idda,
-                        TenDuAn = item.TenDuAn,
-                        Diachi = item.Diachi,
-                        Mota = item.Mota,
-                        Gia = item.Gia,
-                        Dientich = item.Dientich,
-                        Idtk = item.Idtk
-                    };
-                    allDA.Add(all);
+                    allDA = allDA.OrderByDescending(x => x.Idda).ToList();
+                }
+                else if (d == 2)
+                {
+                    allDA = allDA.OrderByDescending(x => x.Gia).ToList();
+                }
+                else if (d == 3)
+                {
+                    allDA = allDA.OrderByDescending(x => x.Diachi).ToList();
+                }
+                else if (d == 4)
+                {
+                    allDA = allDA.OrderByDescending(x => x.Dientich).ToList();
+                }
+                else if (d == 5)
+                {
+                    allDA = allDA.OrderByDescending(x => x.Mota).ToList();
+                }
+                else if (d == 6)
+                {
+                    allDA = allDA.OrderByDescending(x => x.Idtk).ToList();
+                }
+                else if (d == 7)
+                {
+                    allDA = allDA.OrderByDescending(x => x.TinhTrang).ToList();
                 }
             }
-            if (d == 1)
-            {
-                allDA = allDA.OrderByDescending(x => x.Idda).ToList();
-            }
-            else if (d == 2)
-            {
-                allDA = allDA.OrderByDescending(x => x.Gia).ToList();
-            }
-            else if (d == 3)
-            {
-                allDA = allDA.OrderByDescending(x => x.Diachi).ToList();
-            }
-            else if (d == 4)
-            {
-                allDA = allDA.OrderByDescending(x => x.Dientich).ToList();
-            }
-            else if (d == 5)
-            {
-                allDA = allDA.OrderByDescending(x => x.Mota).ToList();
-            }
-            else if (d == 6)
-            {
-                allDA = allDA.OrderByDescending(x => x.Idtk).ToList();
-            }
-            else if (d == 7)
-            {
-                allDA = allDA.OrderByDescending(x => x.TinhTrang).ToList();
-            }
+            
             return allDA;
         }
     }
