@@ -33,19 +33,7 @@ namespace Application
         {
             Loaddata();
         }
-        private void ColumnClick(object sender, ColumnClickEventArgs e)
-        {
 
-        }
-
-        private void list_Danhsach_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void btn_CtDa_Click(object sender, EventArgs e)
-        {
-
-        }
         public void Loaddata()
         {
             dadd = new DADDServices();
@@ -82,10 +70,6 @@ namespace Application
             dgv_listdanhsach.DataSource = dadd.Timkiem(txt_Id.Text, txt_Ten.Text, txt_Diachi.Text, txt_Dientich.Text, txt_Gia.Text, txt_IdChungCu.Text, txt_Mota.Text);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btn_DaCt_Click(object sender, EventArgs e)
         {
@@ -193,7 +177,7 @@ namespace Application
                         }).OrderByDescending(x => x.STT).ToList();
                     }
                 }
-               
+
             }
             else
             {
@@ -263,8 +247,13 @@ namespace Application
                         }).ToList();
                     }
                 }
-                
+
             }
+        }
+
+        private void btn_CtDa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -253,7 +253,6 @@ namespace Application
             dgv_listdanhsach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_listdanhsach.Size = new Size(938, 317);
             dgv_listdanhsach.TabIndex = 21;
-            dgv_listdanhsach.CellContentClick += dataGridView1_CellContentClick;
             dgv_listdanhsach.ColumnHeaderMouseClick += dgv_listdanhsach_ColumnHeaderMouseClick;
             // 
             // HomeDT
