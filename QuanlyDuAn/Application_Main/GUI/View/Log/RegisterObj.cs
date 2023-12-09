@@ -19,7 +19,7 @@ namespace QuanLyDuAnBDS.Log
         QlbdsContext db = new();
         TkDnServices tkdn = new();
         int id;
-        public RegisterObj(string tdn , string mk)
+        public RegisterObj(string tdn, string mk)
         {
             InitializeComponent();
             TkDangNhap tkdnl = tkdn.ChecktkDt(tdn, mk).Find(x => x.Tdn == tdn && x.Mk == mk);
@@ -51,13 +51,13 @@ namespace QuanLyDuAnBDS.Log
         }
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            
+
             if (checkBox1.Checked || checkBox2.Checked)
             {
-                
+
                 if (checkBox1.Checked)
                 {
-                    MessageBox.Show(tkdn.AddChucNang( checkBox1.Text , id));
+                    MessageBox.Show(tkdn.AddChucNang(checkBox1.Text, id));
                     this.Hide();
                     HomeDT hmdt = new(id);
                     hmdt.ShowDialog();
@@ -65,7 +65,7 @@ namespace QuanLyDuAnBDS.Log
                 }
                 else
                 {
-                    MessageBox.Show(tkdn.AddChucNang(checkBox2.Text , id));
+                    MessageBox.Show(tkdn.AddChucNang(checkBox2.Text, id));
                     this.Hide();
                     HomeClient hmcl = new();
                     hmcl.ShowDialog();

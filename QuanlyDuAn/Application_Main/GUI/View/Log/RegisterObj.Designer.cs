@@ -97,7 +97,7 @@
             checkBox1.Size = new Size(291, 407);
             checkBox1.TabIndex = 3;
             checkBox1.Tag = "";
-            checkBox1.Text = "Staff";
+            checkBox1.Text = "Doi Tac";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.Click += checkBox1_Click;
             // 
@@ -154,7 +154,7 @@
             checkBox2.Size = new Size(291, 407);
             checkBox2.TabIndex = 3;
             checkBox2.Tag = "";
-            checkBox2.Text = "Client";
+            checkBox2.Text = "Khach Hang";
             checkBox2.UseVisualStyleBackColor = true;
             checkBox2.Click += checkBox2_Click;
             // 
