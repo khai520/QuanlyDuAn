@@ -1,40 +1,36 @@
-Create Database QLBDS
-Go
-Use QLBDS
-Go
-Create table TkDangNhap(
-	Chucdanh nvarchar(10) null,
-	IDTk char(5) Primary key not null ,
+USE QLBDS
+GO
+CREATE TABLE TkDangNhap(
+	Chucdanh varchar(10) null,
+	IDtk int identity(1,1) Primary key not null,
 	Tdn nvarchar(max) not null,
 	Mk nvarchar(max) not null,
-	Ten nvarchar(50) not null,
-	GT int not null,
-	NS date not null,
+	HoTen nvarchar(max) not null,
+	Gt char(5) not null,
+	Ns date not null,
 	Gmail nvarchar(max) null,
-	SDT nvarchar(10) not null
+	Sdt nvarchar(10) null
 )
-Go
-Create Table DuAnChuaDuyet(
-	IDDACD char(5) Primary key not null,
-	TenDuAn nvarchar(50) not null,
+GO
+CREATE TABLE DuAnChuaDuyet(
+	IDda int identity(1,1) Primary key not null,
+	TenDuAn nvarchar(max) not null,
 	Diachi nvarchar(max) not null,
 	Mota nvarchar(max) null,
 	Gia int null,
 	Dientich float null,
-	IDTk char(5),
-	Foreign key (IDTk) references TkDangNhap(IDTk)
+	IDtk int not null,
+	Foreign key (IDtk) references TkDangNhap(IDtk)
 )
-Go
+GO
 Create table DuAnDaDuyet(
-	IDDADD char(5) Primary key not null,
-	TenDuAn nvarchar(50) not null,
-	DiaChi nvarchar(max) not null,
+	IDda int identity(1,1) not null,
+	TenDuAn nvarchar(max) not null,
+	Diachi nvarchar(max) not null,
 	Mota nvarchar(max) null,
 	Gia int null,
 	Dientich float null,
-	IDTk char(5),
-	Foreign key (IDTk) references TkDangNhap(IDTk)
+	IDtk int not null,
+	Foreign key (IDtk) references TkDangNhap(IDtk)
 )
-Drop Table DuAnChuaDuyet
-Drop Table DuAnDaDuyet
-Drop Table TkDangNhap
+

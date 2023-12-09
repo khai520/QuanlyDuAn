@@ -111,3 +111,5 @@ C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_M
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\WinFormsApp2.HomeClient.resources
+C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\WinFormsApp1.HomeSaler.resources

@@ -4,25 +4,25 @@
     <Compile Update="ad\HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Client\Form1.cs">
+    <Compile Update="GUI\View\Client\HomeClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Saler\Form1.cs">
+    <Compile Update="GUI\View\Saler\HomeSaler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Log\infor.cs">
+    <Compile Update="GUI\View\Log\infor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Log\RegisterObj.cs">
+    <Compile Update="GUI\View\Log\RegisterObj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Staff\HomeDT.cs">
+    <Compile Update="GUI\View\Staff\HomeDT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Log\Login.cs">
+    <Compile Update="GUI\View\Log\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Log\Register.cs">
+    <Compile Update="GUI\View\Log\Register.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
