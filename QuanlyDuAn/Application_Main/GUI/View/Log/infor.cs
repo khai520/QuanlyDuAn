@@ -46,10 +46,10 @@ namespace QuanLyDuAnBDS.Log
         }
         private void btn_DK_Click(object sender, EventArgs e)
         {
-            if (cn.setDataTk(tk,mk,txt_HovaTen.Text,GioiTinh(),dtp_Ngaysinh,txt_Gmail.Text,txt_SDT.Text))
+            if (cn.setDataTk(tk, mk, txt_HovaTen.Text, GioiTinh(), dtp_Ngaysinh, txt_Gmail.Text, txt_SDT.Text))
             {
                 this.Hide();
-                RegisterObj rgo = new(tk , mk);
+                RegisterObj rgo = new(tk, mk);
                 rgo.ShowDialog();
                 this.Close();
             }
@@ -57,7 +57,7 @@ namespace QuanLyDuAnBDS.Log
 
         private void infor_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

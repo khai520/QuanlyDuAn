@@ -11,15 +11,161 @@ namespace QuanLyDuAnBDS.BLL.Services
 {
     public class Services
     {
-        private DACDrepositories dACDrepositories;
-        private DADDRepositories aDDRepositories;
-        public List<DuAnChuaDuyet> DACDCT(int Id)
+        private DACDrepositories dACDrepositories = new();
+        private DADDRepositories aDDRepositories = new();
+        public List<AllDA> AllDACT(int Id)
         {
-            return dACDrepositories.GetAllDACD().Where(x => x.Idtk == Id).ToList();
+            AllDA all;
+            List<AllDA> allDA = new();
+            if (aDDRepositories.GetAllDaDD().Where(x => x.Idtk == Id).Count() > 0)
+            {
+                foreach (var item in aDDRepositories.GetAllDaDD().Where(x => x.Idtk == Id))
+                {
+                    all = new()
+                    {
+                        Idda = item.Idda,
+                        TenDuAn = item.TenDuAn,
+                        Diachi = item.Diachi,
+                        Mota = item.Mota,
+                        Gia = item.Gia,
+                        Dientich = item.Dientich,
+                        Idtk = item.Idtk,
+                        TinhTrang = "Đã được duyêt"
+                    };
+                    allDA.Add(all);
+                }
+            }
+            if (dACDrepositories.GetAllDACD().Where(x => x.Idtk == Id).Count() > 0)
+            {
+                foreach (var item in dACDrepositories.GetAllDACD().Where(x => x.Idtk == Id))
+                {
+                    all = new()
+                    {
+                        Idda = item.Idda,
+                        TenDuAn = item.TenDuAn,
+                        Diachi = item.Diachi,
+                        Mota = item.Mota,
+                        Gia = item.Gia,
+                        Dientich = item.Dientich,
+                        Idtk = item.Idtk,
+                        TinhTrang = "Chưa được duyêt"
+                    };
+                    allDA.Add(all);
+                }
+            }
+            return allDA;
         }
-        public List<DuAnDaDuyet> DADDCT(int Id)
+        public List<AllDA> SapxepTang(DataGridView dgv_listdanhsach , int d , int Id)
         {
-            return aDDRepositories.GetAllDaDD().Where(x => x.Idtk == Id).ToList();
+            int i = 1;
+            AllDA all = new AllDA();
+            List<AllDA> allDA = new();
+            if (dgv_listdanhsach.Columns.Count == 9)
+            {
+                allDA = AllDACT(Id);
+            }
+            else
+            {
+                foreach (var item in aDDRepositories.GetAllDaDD())
+                {
+                    all = new()
+                    {
+                        Idda = item.Idda,
+                        TenDuAn = item.TenDuAn,
+                        Diachi = item.Diachi,
+                        Mota = item.Mota,
+                        Gia = item.Gia,
+                        Dientich = item.Dientich,
+                        Idtk = item.Idtk
+                    };
+                    allDA.Add(all);
+                }
+            }
+            if (d == 1)
+            {
+                allDA = allDA.OrderBy(x => x.Idda).ToList();
+            }
+            else if (d == 2)
+            {
+                allDA = allDA.OrderBy(x => x.Gia).ToList();
+            }
+            else if (d == 3)
+            {
+                allDA = allDA.OrderBy(x => x.Diachi).ToList();
+            }
+            else if (d == 4)
+            {
+                allDA = allDA.OrderBy(x => x.Dientich).ToList();
+            }
+            else if (d == 5)
+            {
+                allDA = allDA.OrderBy(x => x.Mota).ToList();
+            }
+            else if (d == 6)
+            {
+                allDA = allDA.OrderBy(x => x.Idtk).ToList();
+            }
+            else if (d == 7)
+            {
+                allDA = allDA.OrderBy(x => x.TinhTrang).ToList();
+            }
+            return allDA;
+        }
+        public List<AllDA> SapxepGiam(DataGridView dgv_listdanhsach, int d, int Id)
+        {
+            int i = 1;
+            AllDA all = new AllDA();
+            List<AllDA> allDA = new();
+            if (dgv_listdanhsach.Columns.Count == 9)
+            {
+                allDA = AllDACT(Id);
+            }
+            else
+            {
+                foreach (var item in aDDRepositories.GetAllDaDD())
+                {
+                    all = new()
+                    {
+                        Idda = item.Idda,
+                        TenDuAn = item.TenDuAn,
+                        Diachi = item.Diachi,
+                        Mota = item.Mota,
+                        Gia = item.Gia,
+                        Dientich = item.Dientich,
+                        Idtk = item.Idtk
+                    };
+                    allDA.Add(all);
+                }
+            }
+            if (d == 1)
+            {
+                allDA = allDA.OrderByDescending(x => x.Idda).ToList();
+            }
+            else if (d == 2)
+            {
+                allDA = allDA.OrderByDescending(x => x.Gia).ToList();
+            }
+            else if (d == 3)
+            {
+                allDA = allDA.OrderByDescending(x => x.Diachi).ToList();
+            }
+            else if (d == 4)
+            {
+                allDA = allDA.OrderByDescending(x => x.Dientich).ToList();
+            }
+            else if (d == 5)
+            {
+                allDA = allDA.OrderByDescending(x => x.Mota).ToList();
+            }
+            else if (d == 6)
+            {
+                allDA = allDA.OrderByDescending(x => x.Idtk).ToList();
+            }
+            else if (d == 7)
+            {
+                allDA = allDA.OrderByDescending(x => x.TinhTrang).ToList();
+            }
+            return allDA;
         }
     }
 }

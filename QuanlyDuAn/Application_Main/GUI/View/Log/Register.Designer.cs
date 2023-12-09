@@ -38,12 +38,20 @@
             btn_Dk = new Button();
             btn_Dn = new Button();
             lb_ThongBao = new Label();
+            menuStrip1 = new MenuStrip();
+            menuToolStripMenuItem = new ToolStripMenuItem();
+            changerBackgroundToolStripMenuItem = new ToolStripMenuItem();
+            banner1ToolStripMenuItem = new ToolStripMenuItem();
+            banner2ToolStripMenuItem = new ToolStripMenuItem();
+            banner3ToolStripMenuItem = new ToolStripMenuItem();
+            banner4ToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // lb_TenDn
             // 
             resources.ApplyResources(lb_TenDn, "lb_TenDn");
-            lb_TenDn.BackColor = Color.Linen;
+            lb_TenDn.BackColor = Color.Transparent;
             lb_TenDn.Name = "lb_TenDn";
             // 
             // txt_TenDn
@@ -54,7 +62,7 @@
             // lb_Mk
             // 
             resources.ApplyResources(lb_Mk, "lb_Mk");
-            lb_Mk.BackColor = Color.Linen;
+            lb_Mk.BackColor = Color.Transparent;
             lb_Mk.Name = "lb_Mk";
             // 
             // txt_Mk
@@ -65,7 +73,7 @@
             // lb_XnMk
             // 
             resources.ApplyResources(lb_XnMk, "lb_XnMk");
-            lb_XnMk.BackColor = Color.Linen;
+            lb_XnMk.BackColor = Color.Transparent;
             lb_XnMk.Name = "lb_XnMk";
             // 
             // txt_XnMk
@@ -90,15 +98,60 @@
             // lb_ThongBao
             // 
             resources.ApplyResources(lb_ThongBao, "lb_ThongBao");
-            lb_ThongBao.BackColor = Color.Linen;
+            lb_ThongBao.BackColor = Color.White;
             lb_ThongBao.Name = "lb_ThongBao";
-            lb_ThongBao.Hide();
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner7;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem });
+            resources.ApplyResources(menuStrip1, "menuStrip1");
+            menuStrip1.Name = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { changerBackgroundToolStripMenuItem });
+            resources.ApplyResources(menuToolStripMenuItem, "menuToolStripMenuItem");
+            menuToolStripMenuItem.ForeColor = Color.Black;
+            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            // 
+            // changerBackgroundToolStripMenuItem
+            // 
+            changerBackgroundToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { banner1ToolStripMenuItem, banner2ToolStripMenuItem, banner3ToolStripMenuItem, banner4ToolStripMenuItem });
+            changerBackgroundToolStripMenuItem.Name = "changerBackgroundToolStripMenuItem";
+            resources.ApplyResources(changerBackgroundToolStripMenuItem, "changerBackgroundToolStripMenuItem");
+            // 
+            // banner1ToolStripMenuItem
+            // 
+            banner1ToolStripMenuItem.Name = "banner1ToolStripMenuItem";
+            resources.ApplyResources(banner1ToolStripMenuItem, "banner1ToolStripMenuItem");
+            banner1ToolStripMenuItem.Click += banner1ToolStripMenuItem_Click;
+            // 
+            // banner2ToolStripMenuItem
+            // 
+            banner2ToolStripMenuItem.Name = "banner2ToolStripMenuItem";
+            resources.ApplyResources(banner2ToolStripMenuItem, "banner2ToolStripMenuItem");
+            banner2ToolStripMenuItem.Click += banner2ToolStripMenuItem_Click;
+            // 
+            // banner3ToolStripMenuItem
+            // 
+            banner3ToolStripMenuItem.Name = "banner3ToolStripMenuItem";
+            resources.ApplyResources(banner3ToolStripMenuItem, "banner3ToolStripMenuItem");
+            banner3ToolStripMenuItem.Click += banner3ToolStripMenuItem_Click;
+            // 
+            // banner4ToolStripMenuItem
+            // 
+            banner4ToolStripMenuItem.Name = "banner4ToolStripMenuItem";
+            resources.ApplyResources(banner4ToolStripMenuItem, "banner4ToolStripMenuItem");
+            banner4ToolStripMenuItem.Click += banner4ToolStripMenuItem_Click;
             // 
             // Register
             // 
             AutoScaleMode = AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             AutoValidate = AutoValidate.EnablePreventFocusChange;
+            BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner7;
+            Controls.Add(menuStrip1);
             Controls.Add(lb_ThongBao);
             Controls.Add(btn_Dn);
             Controls.Add(btn_Dk);
@@ -112,6 +165,8 @@
             MdiChildrenMinimizedAnchorBottom = false;
             Name = "Register";
             ShowIcon = false;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,5 +182,12 @@
         private Button btn_Dk;
         private Button btn_Dn;
         private Label lb_ThongBao;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuToolStripMenuItem;
+        private ToolStripMenuItem changerBackgroundToolStripMenuItem;
+        private ToolStripMenuItem banner1ToolStripMenuItem;
+        private ToolStripMenuItem banner2ToolStripMenuItem;
+        private ToolStripMenuItem banner3ToolStripMenuItem;
+        private ToolStripMenuItem banner4ToolStripMenuItem;
     }
 }

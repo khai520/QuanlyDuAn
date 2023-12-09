@@ -22,7 +22,7 @@ namespace Application
         {
             InitializeComponent();
             this.txt_TenDn.Text = tdn;
-            
+            lb_ThongBao.Hide();
         }
 
         private void btn_Dn_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace Application
             lg.ShowDialog();
             this.Close();
         }
-       
+
         private void btn_Dk_Click(object sender, EventArgs e)
         {
             string? check = con.KiemtraMk(txt_TenDn.Text, txt_Mk.Text, txt_XnMk.Text);
@@ -41,7 +41,7 @@ namespace Application
                 if (check == "")
                 {
                     this.Hide();
-                    infor infor = new(lb_TenDn.Text, lb_Mk.Text);
+                    infor infor = new(txt_TenDn.Text, txt_Mk.Text);
                     infor.ShowDialog();
                     this.Close();
                 }
@@ -56,6 +56,34 @@ namespace Application
                 MessageBox.Show("Thiếu dữ liệu");
                 throw;
             }
+        }
+
+        private void banner1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner;
+            menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner;
+            menuToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void banner2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner2;
+            menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner2;
+            menuToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void banner3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner4;
+            menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner4;
+            menuToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void banner4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner7;
+            menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner7;
+            menuToolStripMenuItem.ForeColor = Color.Black;
         }
     }
 }

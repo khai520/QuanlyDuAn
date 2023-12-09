@@ -250,9 +250,11 @@ namespace Application
             dgv_listdanhsach.Location = new Point(12, 12);
             dgv_listdanhsach.Name = "dgv_listdanhsach";
             dgv_listdanhsach.RowTemplate.Height = 25;
+            dgv_listdanhsach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_listdanhsach.Size = new Size(938, 317);
             dgv_listdanhsach.TabIndex = 21;
             dgv_listdanhsach.CellContentClick += dataGridView1_CellContentClick;
+            dgv_listdanhsach.ColumnHeaderMouseClick += dgv_listdanhsach_ColumnHeaderMouseClick;
             // 
             // HomeDT
             // 
@@ -283,6 +285,7 @@ namespace Application
             MaximizeBox = false;
             Name = "HomeDT";
             StartPosition = FormStartPosition.CenterScreen;
+            FormClosed += HomeDT_FormClosed;
             Load += HomeDT_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_listdanhsach).EndInit();
             ResumeLayout(false);

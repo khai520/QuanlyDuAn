@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyDuAnBDS.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,5 +22,6 @@ namespace QuanLyDuAnBDS.DAL.Models
         public double? Dientich { get; set; }
 
         public int Idtk { get; set; }
+        public string? TinhTrang { get; set; }
     }
 }

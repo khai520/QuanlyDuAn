@@ -126,7 +126,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lb_MK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 211</value>
+    <value>79, 286</value>
   </data>
   <data name="lb_MK.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 21</value>
@@ -147,10 +147,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_MK.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="txt_TenDn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 160</value>
+    <value>227, 235</value>
   </data>
   <data name="txt_TenDn.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 22</value>
@@ -168,10 +168,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txt_TenDn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btn_DN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>528, 363</value>
+    <value>340, 381</value>
   </data>
   <data name="btn_DN.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 32</value>
@@ -192,7 +192,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_DN.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lb_TenDN.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -201,7 +201,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lb_TenDN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 160</value>
+    <value>79, 235</value>
   </data>
   <data name="lb_TenDN.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 21</value>
@@ -222,10 +222,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_TenDN.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btn_DK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>334, 363</value>
+    <value>146, 381</value>
   </data>
   <data name="btn_DK.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 32</value>
@@ -246,10 +246,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_DK.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txt_Mk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 209</value>
+    <value>227, 284</value>
   </data>
   <data name="txt_Mk.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
@@ -258,7 +258,7 @@
     <value>250, 22</value>
   </data>
   <data name="txt_Mk.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;txt_Mk.Name" xml:space="preserve">
     <value>txt_Mk</value>
@@ -270,13 +270,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txt_Mk.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lb_TB.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lb_TB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 257</value>
+    <value>171, 327</value>
   </data>
   <data name="lb_TB.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 24</value>
@@ -297,6 +297,72 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_TB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>102, 17</value>
+  </metadata>
+  <data name="banner1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner1ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner1</value>
+  </data>
+  <data name="banner2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner2ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner2</value>
+  </data>
+  <data name="banner3ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner3ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner3</value>
+  </data>
+  <data name="banner4ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner4ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner4</value>
+  </data>
+  <data name="changerBackgroundToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 26</value>
+  </data>
+  <data name="changerBackgroundToolStripMenuItem.Text" xml:space="preserve">
+    <value>Changer Background</value>
+  </data>
+  <data name="menuToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="menuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 25</value>
+  </data>
+  <data name="menuToolStripMenuItem.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>962, 29</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -320,6 +386,42 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="&gt;&gt;menuToolStripMenuItem.Name" xml:space="preserve">
+    <value>menuToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;menuToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changerBackgroundToolStripMenuItem.Name" xml:space="preserve">
+    <value>changerBackgroundToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;changerBackgroundToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;banner1ToolStripMenuItem.Name" xml:space="preserve">
+    <value>banner1ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;banner1ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;banner2ToolStripMenuItem.Name" xml:space="preserve">
+    <value>banner2ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;banner2ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;banner3ToolStripMenuItem.Name" xml:space="preserve">
+    <value>banner3ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;banner3ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;banner4ToolStripMenuItem.Name" xml:space="preserve">
+    <value>banner4ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;banner4ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Login</value>
