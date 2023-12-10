@@ -14,5 +14,10 @@ namespace QuanLyDuAnBDS.DAL.Repositories
         {
             return db.DuAnChuaDuyets.ToList();
         }
+        public bool AddDa(DuAnChuaDuyet list)
+        {
+            db.DuAnChuaDuyets.Add(list);
+            return db.SaveChanges() > 0;
+        }
     }
 }

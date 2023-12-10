@@ -67,7 +67,7 @@ namespace QuanLyDuAnBDS.Log
                 {
                     MessageBox.Show(tkdn.AddChucNang(checkBox2.Text, id));
                     this.Hide();
-                    HomeClient hmcl = new();
+                    HomeClient hmcl = new(id);
                     hmcl.ShowDialog();
                     this.Close();
 

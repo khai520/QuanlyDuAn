@@ -48,5 +48,22 @@ namespace QuanLyDuAnBDS.BLL.Services
             }
             return checkIdda;
         }
+        public string Addser( string Ten , string Diachi , int? Gia , double? Dientich , string? Mota , int Iddt)
+        {
+           DuAnChuaDuyet dacdAdd = new DuAnChuaDuyet() { 
+           TenDuAn = Ten,
+           Diachi = Diachi,
+           Gia = Gia,
+           Dientich = Dientich,
+           Mota = Mota,
+           Idtk = Iddt
+           };
+            if (dacdre.AddDa(dacdAdd))
+            {
+                return "Add thành công";
+            }
+            else return "Add không thành công";
+
+        }
     }
 }

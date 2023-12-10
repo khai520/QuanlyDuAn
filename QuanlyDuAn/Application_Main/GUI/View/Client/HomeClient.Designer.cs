@@ -60,6 +60,7 @@
             dgv_listdanhsach.Size = new Size(938, 317);
             dgv_listdanhsach.TabIndex = 42;
             dgv_listdanhsach.CellClick += dgv_listdanhsach_CellClick;
+            dgv_listdanhsach.ColumnHeaderMouseClick += dgv_listdanhsach_ColumnHeaderMouseClick;
             // 
             // btn_CtDa
             // 

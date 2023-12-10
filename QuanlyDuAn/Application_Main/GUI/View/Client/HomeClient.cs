@@ -5,11 +5,14 @@ namespace WinFormsApp2
 {
     public partial class HomeClient : Form
     {
-        public HomeClient()
+        int Id;
+        public HomeClient(int ID)
         {
             InitializeComponent();
+            Id = ID;
         }
         private DADDServices dadd;
+        private Services sv;
         public void LoadData()
         {
             int i = 1;
@@ -56,7 +59,82 @@ namespace WinFormsApp2
 
         private void dgv_listdanhsach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+        }
+        bool check = true;
+        private void dgv_listdanhsach_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int d = e.ColumnIndex;
+            int i = 1;
+            sv = new();
+            if (d == 0)
+            {
+                if (check)
+                {
+                    dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
+                    {
+                        STT = i++,
+                        x.Idda,
+                        x.TenDuAn,
+                        x.Gia,
+                        x.Diachi,
+                        x.Dientich,
+                        x.Mota,
+                        x.Idtk
+                    }).OrderBy(x => x.STT).ToList();
+                    check = false;
+                }
+                else
+                {
+                    check = true;
+                    dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
+                    {
+                        STT = i++,
+                        x.Idda,
+                        x.TenDuAn,
+                        x.Gia,
+                        x.Diachi,
+                        x.Dientich,
+                        x.Mota,
+                        x.Idtk
+                    }).OrderByDescending(x => x.STT).ToList();
+                }
+
+            }
+            else
+            {
+                if (check)
+                {
+                    check = false;
+                    dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
+                    {
+                        STT = i++,
+                        x.Idda,
+                        x.TenDuAn,
+                        x.Gia,
+                        x.Diachi,
+                        x.Dientich,
+                        x.Mota,
+                        x.Idtk
+                    }).ToList();
+                }
+                else
+                {
+                    check = true;
+                    dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
+                    {
+                        STT = i++,
+                        x.Idda,
+                        x.TenDuAn,
+                        x.Gia,
+                        x.Diachi,
+                        x.Dientich,
+                        x.Mota,
+                        x.Idtk
+                    }).ToList();
+                }
+
+            }
         }
     }
 }

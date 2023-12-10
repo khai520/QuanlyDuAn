@@ -25,10 +25,10 @@ namespace QuanLyDuAnBDS.BLL.Services
                     {
                         Idda = item.Idda,
                         TenDuAn = item.TenDuAn,
-                        Diachi = item.Diachi,
-                        Mota = item.Mota,
                         Gia = item.Gia,
+                        Diachi = item.Diachi,
                         Dientich = item.Dientich,
+                        Mota = item.Mota,
                         Idtk = item.Idtk,
                         TinhTrang = "Đã được duyêt"
                     };
@@ -43,10 +43,10 @@ namespace QuanLyDuAnBDS.BLL.Services
                     {
                         Idda = item.Idda,
                         TenDuAn = item.TenDuAn,
-                        Diachi = item.Diachi,
-                        Mota = item.Mota,
                         Gia = item.Gia,
+                        Diachi = item.Diachi,
                         Dientich = item.Dientich,
+                        Mota = item.Mota,
                         Idtk = item.Idtk,
                         TinhTrang = "Chưa được duyêt"
                     };
@@ -73,10 +73,10 @@ namespace QuanLyDuAnBDS.BLL.Services
                     {
                         Idda = item.Idda,
                         TenDuAn = item.TenDuAn,
-                        Diachi = item.Diachi,
-                        Mota = item.Mota,
                         Gia = item.Gia,
+                        Diachi = item.Diachi,
                         Dientich = item.Dientich,
+                        Mota = item.Mota,
                         Idtk = item.Idtk
                     };
                     allDA.Add(all);
@@ -90,25 +90,29 @@ namespace QuanLyDuAnBDS.BLL.Services
                 }
                 else if (d == 2)
                 {
-                    allDA = allDA.OrderBy(x => x.Gia).ToList();
+                    allDA = allDA.OrderBy(x => x.TenDuAn).ToList();
                 }
                 else if (d == 3)
                 {
-                    allDA = allDA.OrderBy(x => x.Diachi).ToList();
+                    allDA = allDA.OrderBy(x => x.Gia).ToList();
                 }
                 else if (d == 4)
                 {
-                    allDA = allDA.OrderBy(x => x.Dientich).ToList();
+                    allDA = allDA.OrderBy(x => x.Diachi).ToList();
                 }
                 else if (d == 5)
                 {
-                    allDA = allDA.OrderBy(x => x.Mota).ToList();
+                    allDA = allDA.OrderBy(x => x.Dientich).ToList();
                 }
                 else if (d == 6)
                 {
-                    allDA = allDA.OrderBy(x => x.Idtk).ToList();
+                    allDA = allDA.OrderBy(x => x.Mota).ToList();
                 }
                 else if (d == 7)
+                {
+                    allDA = allDA.OrderBy(x => x.Idtk).ToList();
+                }
+                else if (d == 8)
                 {
                     allDA = allDA.OrderBy(x => x.TinhTrang).ToList();
                 }
@@ -121,25 +125,29 @@ namespace QuanLyDuAnBDS.BLL.Services
                 }
                 else if (d == 2)
                 {
-                    allDA = allDA.OrderByDescending(x => x.Gia).ToList();
+                    allDA = allDA.OrderByDescending(x => x.TenDuAn).ToList();
                 }
                 else if (d == 3)
                 {
-                    allDA = allDA.OrderByDescending(x => x.Diachi).ToList();
+                    allDA = allDA.OrderByDescending(x => x.Gia).ToList();
                 }
                 else if (d == 4)
                 {
-                    allDA = allDA.OrderByDescending(x => x.Dientich).ToList();
+                    allDA = allDA.OrderByDescending(x => x.Diachi).ToList();
                 }
                 else if (d == 5)
                 {
-                    allDA = allDA.OrderByDescending(x => x.Mota).ToList();
+                    allDA = allDA.OrderByDescending(x => x.Dientich).ToList();
                 }
                 else if (d == 6)
                 {
-                    allDA = allDA.OrderByDescending(x => x.Idtk).ToList();
+                    allDA = allDA.OrderByDescending(x => x.Mota).ToList();
                 }
                 else if (d == 7)
+                {
+                    allDA = allDA.OrderByDescending(x => x.Idtk).ToList();
+                }
+                else if (d == 8)
                 {
                     allDA = allDA.OrderByDescending(x => x.TinhTrang).ToList();
                 }

@@ -59,7 +59,7 @@ namespace Application
                     else if (tkdn.Chucdanh == "Khach Hang")
                     {
                         this.Hide();
-                        HomeClient homecl = new HomeClient();
+                        HomeClient homecl = new HomeClient(tkdn.Idtk);
                         homecl.ShowDialog();
                         this.Close();
                     }
