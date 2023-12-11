@@ -1,6 +1,7 @@
 ﻿using QuanLyDuAnBDS.BLL.Services;
 using QuanLyDuAnBDS.DAL.Models;
 using QuanLyDuAnBDS.DB;
+using QuanLyDuAnBDS.GUI.View;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -115,7 +116,7 @@ namespace Application
                 {
                     if (dgv_listdanhsach.Columns.Count == 9)
                     {
-                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id , check).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -130,7 +131,7 @@ namespace Application
                     }
                     else
                     {
-                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id ,check).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -165,7 +166,7 @@ namespace Application
                     }
                     else
                     {
-                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id,check).Select(x => new
+                        dgv_listdanhsach.DataSource = sv.Sapxep(dgv_listdanhsach, d, Id, check).Select(x => new
                         {
                             STT = i++,
                             x.Idda,
@@ -254,6 +255,14 @@ namespace Application
         private void btn_CtDa_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Dang_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddDa add = new(Id);
+            add.ShowDialog();
+            this.Close();
         }
     }
 }

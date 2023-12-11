@@ -119,6 +119,7 @@
             btn_Thoat.TabIndex = 10;
             btn_Thoat.Text = "Thoát";
             btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // btn_Dang
             // 
@@ -220,8 +221,12 @@
             Controls.Add(label3);
             Controls.Add(txt_Ten);
             Controls.Add(label1);
+            MaximizeBox = false;
             Name = "AddDa";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddDa";
+            FormClosed += AddDa_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pb_anh).EndInit();
             ResumeLayout(false);
             PerformLayout();

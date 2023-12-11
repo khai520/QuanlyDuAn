@@ -1,4 +1,5 @@
-﻿using QuanLyDuAnBDS.BLL.Services;
+﻿using Application;
+using QuanLyDuAnBDS.BLL.Services;
 using QuanLyDuAnBDS.DAL.Repositories;
 using System;
 using System.Collections.Generic;
@@ -63,16 +64,37 @@ namespace QuanLyDuAnBDS.GUI.View
             {
                 if (cbx_2.SelectedItem != null)
                 {
-                    MessageBox.Show(dacdser.Addser(txt_Ten.Text, cbx_1.SelectedItem.ToString() + cbx_2.SelectedItem.ToString(), Convert.ToInt32(txt_Gia.Text), Convert.ToDouble(txt_Gia.Text), txt_Mota.Text, Id));
+                    MessageBox.Show(dacdser.Addser(txt_Ten.Text, cbx_1.SelectedItem.ToString() + "-" + cbx_2.SelectedItem.ToString(), Convert.ToInt32(txt_Gia.Text), Convert.ToDouble(txt_Gia.Text), txt_Mota.Text, Id));
+                    this.Hide();
+                    HomeDT hmdt = new(Id);
+                    hmdt.ShowDialog();
+                    this.Close();
                 }
                 else MessageBox.Show("Thiếu địa chỉ");
             }
             else MessageBox.Show("Thiếu tên dự án");
+            
         }
 
         private void cbx_1_SelectedIndexChanged(object sender, EventArgs e)
         {
             TinhThanh();
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeDT hmdt = new(Id);
+            hmdt.ShowDialog();
+            this.Close();
+        }
+
+        private void AddDa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            HomeDT hmdt = new(Id);
+            hmdt.ShowDialog();
+            this.Close();
         }
     }
 }

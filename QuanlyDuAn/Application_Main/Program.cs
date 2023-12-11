@@ -1,5 +1,6 @@
 using admin;
 using QuanLyDuAnBDS.GUI.View;
+using QuanLyDuAnBDS.GUI.View.Admin;
 using QuanLyDuAnBDS.Log;
 
 namespace Application
@@ -15,7 +16,7 @@ namespace Application
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            System.Windows.Forms.Application.Run(new AddDa());
+            System.Windows.Forms.Application.Run(new HomeAd());
 
         }
     }

@@ -7,6 +7,9 @@
     <Compile Update="GUI\View\AddDa.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\View\Admin\HomeAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\View\Client\HomeClient.cs">
       <SubType>Form</SubType>
     </Compile>

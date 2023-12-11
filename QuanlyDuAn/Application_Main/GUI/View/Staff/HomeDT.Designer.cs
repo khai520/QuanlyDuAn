@@ -48,7 +48,7 @@ namespace Application
             btn_TcDa = new Button();
             btn_DaCt = new Button();
             btn_CtDa = new Button();
-            button1 = new Button();
+            btn_DangDa = new Button();
             dgv_listdanhsach = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgv_listdanhsach).BeginInit();
             SuspendLayout();
@@ -234,15 +234,16 @@ namespace Application
             btn_CtDa.UseVisualStyleBackColor = true;
             btn_CtDa.Click += btn_CtDa_Click;
             // 
-            // button1
+            // btn_DangDa
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(828, 468);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 58);
-            button1.TabIndex = 20;
-            button1.Text = "Đăng dự án ";
-            button1.UseVisualStyleBackColor = true;
+            btn_DangDa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_DangDa.Location = new Point(828, 468);
+            btn_DangDa.Name = "btn_DangDa";
+            btn_DangDa.Size = new Size(120, 58);
+            btn_DangDa.TabIndex = 20;
+            btn_DangDa.Text = "Đăng dự án ";
+            btn_DangDa.UseVisualStyleBackColor = true;
+            btn_DangDa.Click += Dang_Click;
             // 
             // dgv_listdanhsach
             // 
@@ -261,7 +262,7 @@ namespace Application
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(962, 538);
             Controls.Add(dgv_listdanhsach);
-            Controls.Add(button1);
+            Controls.Add(btn_DangDa);
             Controls.Add(btn_CtDa);
             Controls.Add(btn_DaCt);
             Controls.Add(btn_TcDa);
@@ -316,7 +317,7 @@ namespace Application
         private Button btn_TcDa;
         private Button btn_DaCt;
         private Button btn_CtDa;
-        private Button button1;
+        private Button btn_DangDa;
         private DataGridView dgv_listdanhsach;
     }
 }

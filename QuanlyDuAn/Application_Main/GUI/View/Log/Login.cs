@@ -104,6 +104,8 @@ namespace Application
             BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner;
             menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner;
             menuToolStripMenuItem.ForeColor = Color.Black;
+            lb_TenDN.ForeColor = Color.White;
+            lb_MK.ForeColor = Color.White;
             lb_TB.ForeColor = Color.White;
             Changer();
         }
@@ -113,18 +115,27 @@ namespace Application
             BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner2;
             menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner2;
             menuToolStripMenuItem.ForeColor = Color.White;
+            lb_TenDN.ForeColor = Color.White;
+            lb_MK.ForeColor = Color.White;
             lb_TB.ForeColor = Color.White;
             Changer();
         }
 
         private void banner3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lb_TenDN.Location = new Point(130, 270);
+            txt_TenDn.Location = new Point(278, 270);
+            lb_MK.Location = new Point(130, 321);
+            txt_Mk.Location = new Point(278, 319);
+            lb_TB.Location = new Point(222, 362);
+            btn_DK.Location = new Point(197, 416);
+            btn_DN.Location = new Point(391, 416);
             BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner6;
             menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner6;
             menuToolStripMenuItem.ForeColor = Color.White;
+            lb_TenDN.ForeColor = Color.White;
+            lb_MK.ForeColor = Color.White;
             lb_TB.ForeColor = Color.White;
-            lb_TB.ForeColor = Color.White;
-            Changer2();
         }
 
         private void banner4ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -132,7 +143,8 @@ namespace Application
             BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner5;
             menuStrip1.BackgroundImage = QuanLyDuAnBDS.Properties.Resources.banner5;
             menuToolStripMenuItem.ForeColor = Color.Black;
-            lb_TB.ForeColor = Color.Black;
+            lb_TenDN.ForeColor = Color.Black;
+            lb_MK.ForeColor = Color.Black;
             lb_TB.ForeColor = Color.Black;
             Changer2();
         }

@@ -60,9 +60,9 @@ namespace QuanLyDuAnBDS.BLL.Services
            };
             if (dacdre.AddDa(dacdAdd))
             {
-                return "Add thành công";
+                return "Đăng thành công";
             }
-            else return "Add không thành công";
+            else return "Đăng không thành công";
 
         }
     }

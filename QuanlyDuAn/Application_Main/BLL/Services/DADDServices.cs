@@ -54,8 +54,7 @@ namespace QuanLyDuAnBDS.BLL.Services
             {
                 MessageBox.Show("Sai định dạng");
                 return dadre.GetAllDaDD();
-            }
-            
+            }  
         }
     }
 }

@@ -64,7 +64,6 @@ C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_M
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\Application.Login.resources
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\Application.Register.resources
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.Properties.Resources.resources
-C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\Application.HomeDT.resources
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.csproj.GenerateResource.cache
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.AssemblyInfoInputs.cache
@@ -114,3 +113,5 @@ C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_M
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\WinFormsApp2.HomeClient.resources
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\WinFormsApp1.HomeSaler.resources
 C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.GUI.View.AddDa.resources
+C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\QuanLyDuAnBDS.GUI.View.Admin.HomeAd.resources
+C:\Users\khai5\OneDrive\Tài liệu\GitHub\QuanlyDuAn\QuanlyDuAn\Application_Main\obj\Debug\net6.0-windows\Application.HomeDT.resources

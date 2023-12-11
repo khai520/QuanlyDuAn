@@ -302,45 +302,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>102, 17</value>
   </metadata>
-  <data name="banner1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 26</value>
-  </data>
-  <data name="banner1ToolStripMenuItem.Text" xml:space="preserve">
-    <value>banner1</value>
-  </data>
-  <data name="banner2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 26</value>
-  </data>
-  <data name="banner2ToolStripMenuItem.Text" xml:space="preserve">
-    <value>banner2</value>
-  </data>
-  <data name="banner3ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 26</value>
-  </data>
-  <data name="banner3ToolStripMenuItem.Text" xml:space="preserve">
-    <value>banner3</value>
-  </data>
-  <data name="banner4ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 26</value>
-  </data>
-  <data name="banner4ToolStripMenuItem.Text" xml:space="preserve">
-    <value>banner4</value>
-  </data>
-  <data name="changerBackgroundToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 26</value>
-  </data>
-  <data name="changerBackgroundToolStripMenuItem.Text" xml:space="preserve">
-    <value>Changer Background</value>
-  </data>
-  <data name="menuToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="menuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 25</value>
-  </data>
-  <data name="menuToolStripMenuItem.Text" xml:space="preserve">
-    <value>Menu</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -364,6 +325,45 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="menuToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="menuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 25</value>
+  </data>
+  <data name="menuToolStripMenuItem.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="changerBackgroundToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 26</value>
+  </data>
+  <data name="changerBackgroundToolStripMenuItem.Text" xml:space="preserve">
+    <value>Changer Background</value>
+  </data>
+  <data name="banner1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner1ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner1</value>
+  </data>
+  <data name="banner2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner2ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner2</value>
+  </data>
+  <data name="banner3ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner3ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner3</value>
+  </data>
+  <data name="banner4ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="banner4ToolStripMenuItem.Text" xml:space="preserve">
+    <value>banner4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
